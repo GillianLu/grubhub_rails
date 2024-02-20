@@ -1,0 +1,16 @@
+<div id="<%= dom_id grub %>">
+  <div class="jumbotron bg-secondary-subtle p-3">
+    <h1 class="display-4">
+      <%= grub.name %>
+      <%= grub.cuisine %>
+    </h1>
+    <p class="lead">
+      <%= grub.calories %> calories | <%= grub.price %> 
+    </p>
+    <hr class="my-4">
+    <a  href="#" role=button> 
+      <%= link_to "View Grub", @grub, class:"btn btn-primary btn-lg, small"%> 
+      <%= link_to "Back to Grubs", grubs_path, class:"btn btn-primary btn-lg, small" %>
+      <%= button_to "Destroy Grub", @grub, class:"btn btn-danger btn-lg, small mt-3",method: :delete %>
+    </a>
+</div>
