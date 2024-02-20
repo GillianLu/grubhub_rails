@@ -8,10 +8,13 @@
 }
 .grub-container .jumbotron .display-4 {
     color: #294B29;
+    margin-bottom: 20px;
 }
 
 .grub-container .jumbotron .lead {
     color: #50623A;
+    padding-top: 20px;
+    margin-top: 20px;
 }
 
 .btn-primary {
