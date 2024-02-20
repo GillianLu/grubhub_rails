@@ -1566,3 +1566,15 @@ Processing by GrubsController#index as HTML
 Completed 200 OK in 17ms (Views: 9.5ms | ActiveRecord: 0.6ms | Allocations: 4763)
 
 
+Started GET "/grubs" for 127.0.0.1 at 2024-02-20 10:01:52 +0800
+Processing by GrubsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering grubs/index.html.erb within layouts/application
+  [1m[36mGrub Load (8.3ms)[0m  [1m[34mSELECT "grubs".* FROM "grubs"[0m
+  ↳ app/views/grubs/index.html.erb:18
+  Rendered grubs/index.html.erb within layouts/application (Duration: 15.3ms | Allocations: 1287)
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 99)
+  Rendered layout layouts/application.html.erb (Duration: 28.0ms | Allocations: 2609)
+Completed 200 OK in 31ms (Views: 17.4ms | ActiveRecord: 11.8ms | Allocations: 2884)
+
+
