@@ -1,2 +1,50 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<%= stylesheet_link_tag('application') %>
+
+ <%= stylesheet_link_tag('index') %>
+ <body>
+        <section id="hero">
+            <div class="container">
+                <h1>Welcome to GrubHub</h1>
+                <p>Discover the best grubs in town.</p>
+                <%= link_to "Explore Now", grubs_path, class:"btn" %>
+
+            </div>
+        </section>
+
+        <section id="about">
+            <div class="container about-container">
+                <div class="about-image"></div>
+                <div class="about-text">
+                    <h2>About Us</h2>
+                    <p>GrubHub is your go-to community where foodies unite to share their passion for all things delicious. It's a vibrant hub where you can showcase your favorite grubs and discover new culinary gems added by fellow grub enthusiasts. Dive into a world of shared flavors and celebrate the dishes that bring us together.</p>
+                    <%= link_to "List your grub", new_grub_path,  class:"btn" %>
+
+
+                </div>
+            </div>
+
+        </section>
+
+        <section id="grubs">
+            <div class="container">
+                <h2>Our Grubs</h2>
+                <p>Check out the amazing grubs added by our community.</p>
+                <div class="grub-photos">
+                    <div class="grub-photo" style="background-image: url(<%= image_url('grub1.jpg') %>);"></div>
+                    <div class="grub-photo" style="background-image: url(<%= image_url('food.jpg') %>);"></div>
+                    <div class="grub-photo" style="background-image: url(<%= image_url('grub3.jpg') %>);"></div>
+                    <div class="grub-photo" style="background-image: url(<%= image_url('grub4.jpg') %>);"></div>
+                    <div class="grub-photo" style="background-image: url(<%= image_url('grub5.jpg') %>);"></div>
+                    
+                </div>
+                <%= link_to "See All Grubs", grubs_path, class: "btn" %>
+            </div>
+        </section>
+
+    </body>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 GrubHub. All rights reserved.</p>
+        </div>
+    </footer>

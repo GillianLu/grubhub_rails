@@ -1,6 +1,12 @@
+<%= stylesheet_link_tag('application') %>
+<%= stylesheet_link_tag('index') %>
+<%= stylesheet_link_tag('grubs') %>
+
 <p style="color: green"><%= notice %></p>
 
-<h1>Grubs</h1>
+<div class="grubs-h1">
+  <h1>Grubs</h1>
+</div>
 <table class="table table-striped">
   <thead class ="table-dark">
     <tr>
@@ -28,4 +34,8 @@
   </div>
 </table>
 
-<%= link_to "New grub", new_grub_path,  class:"btn btn-primary btn-lg, small" %>
+<div class="centered-link-container">
+  <%= link_to "New grub", new_grub_path, class: "btn" %>
+</div>
+
+
