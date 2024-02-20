@@ -186,8 +186,9 @@ section p {
     padding: 40px 0;
 }
 
-#grubs  .container{
+#grubs  .footer-container{
     max-width: 1200px;
+    height: 100%;
     margin: auto;
     overflow: hidden;
 }
@@ -224,7 +225,7 @@ footer {
     background-color: #294B29;
     color: #fff;
     text-align: center;
-    padding: 0;
+    padding: 20px;
     margin-bottom: 0;
 }
 
