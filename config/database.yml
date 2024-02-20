@@ -79,6 +79,7 @@ test:
 #
 production:
   <<: *default
+  url: <%= ENV["DATABASE_URL"] %>
   database: grub_hub_rails_production
   username: grub_hub_rails
   password: <%= ENV["GRUB_HUB_RAILS_DATABASE_PASSWORD"] %>
