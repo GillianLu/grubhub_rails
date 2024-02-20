@@ -4,11 +4,14 @@
     box-sizing: border-box;
     font-family: 'DM Sans', sans-serif;
 }
-
+html,
 body {
     line-height: 1.6;
     background-color: antiquewhite;
+    height: 100%;
+    margin: 0;
 }
+
 
 .navbar-custom {
     background-color: #294B29;
@@ -186,9 +189,8 @@ section p {
     padding: 40px 0;
 }
 
-#grubs  .footer-container{
+#grubs .container{
     max-width: 1200px;
-    height: 100%;
     margin: auto;
     overflow: hidden;
 }
@@ -221,12 +223,13 @@ section p {
     }
 }
 
+
 footer {
     background-color: #294B29;
     color: #fff;
     text-align: center;
-    padding: 20px;
-    margin-bottom: 0;
+    padding: 20px 0;
+    margin: 0;
 }
 
 footer p {
