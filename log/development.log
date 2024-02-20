@@ -6870,3 +6870,83 @@ Processing by GrubsController#show as HTML
 Completed 200 OK in 6ms (Views: 3.4ms | ActiveRecord: 0.3ms | Allocations: 2150)
 
 
+Started GET "/" for 127.0.0.1 at 2024-02-20 18:30:06 +0800
+  [1m[36mActiveRecord::SchemaMigration Load (2.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 111.3ms | Allocations: 46039)
+  Rendered home/_header.html.erb (Duration: 0.4ms | Allocations: 361)
+  Rendered layout layouts/application.html.erb (Duration: 119.2ms | Allocations: 50356)
+Completed 200 OK in 128ms (Views: 122.0ms | ActiveRecord: 0.0ms | Allocations: 54645)
+
+
+Started GET "/grubs" for 127.0.0.1 at 2024-02-20 18:30:09 +0800
+Processing by GrubsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering grubs/index.html.erb within layouts/application
+  [1m[36mGrub Load (1.5ms)[0m  [1m[34mSELECT "grubs".* FROM "grubs"[0m
+  ↳ app/views/grubs/index.html.erb:23
+  Rendered grubs/index.html.erb within layouts/application (Duration: 48.5ms | Allocations: 16139)
+  Rendered home/_header.html.erb (Duration: 0.1ms | Allocations: 133)
+  Rendered layout layouts/application.html.erb (Duration: 49.6ms | Allocations: 16901)
+Completed 200 OK in 67ms (Views: 25.8ms | ActiveRecord: 24.7ms | Allocations: 23319)
+
+
+Started GET "/grubs/2" for 127.0.0.1 at 2024-02-20 18:30:10 +0800
+Processing by GrubsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mGrub Load (0.3ms)[0m  [1m[34mSELECT "grubs".* FROM "grubs" WHERE "grubs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/grubs_controller.rb:63:in `set_grub'
+  Rendering layout layouts/application.html.erb
+  Rendering grubs/show.html.erb within layouts/application
+  Rendered grubs/_grub.html.erb (Duration: 1.8ms | Allocations: 807)
+  Rendered grubs/show.html.erb within layouts/application (Duration: 5.7ms | Allocations: 1607)
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 131)
+  Rendered layout layouts/application.html.erb (Duration: 6.6ms | Allocations: 2305)
+Completed 200 OK in 18ms (Views: 7.3ms | ActiveRecord: 0.5ms | Allocations: 5285)
+
+
+Started GET "/grubs/2/edit" for 127.0.0.1 at 2024-02-20 18:30:11 +0800
+Processing by GrubsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mGrub Load (0.5ms)[0m  [1m[34mSELECT "grubs".* FROM "grubs" WHERE "grubs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/grubs_controller.rb:63:in `set_grub'
+  Rendering layout layouts/application.html.erb
+  Rendering grubs/edit.html.erb within layouts/application
+  Rendered grubs/_form.html.erb (Duration: 7.1ms | Allocations: 1938)
+  Rendered grubs/edit.html.erb within layouts/application (Duration: 9.2ms | Allocations: 2282)
+  Rendered home/_header.html.erb (Duration: 0.1ms | Allocations: 131)
+  Rendered layout layouts/application.html.erb (Duration: 10.8ms | Allocations: 3007)
+Completed 200 OK in 17ms (Views: 11.6ms | ActiveRecord: 0.5ms | Allocations: 4042)
+
+
+Started PATCH "/grubs/2" for 127.0.0.1 at 2024-02-20 18:30:14 +0800
+Processing by GrubsController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "grub"=>{"name"=>"Chicken Adobo", "cuisine"=>"Filipino", "calories"=>"12", "price"=>""}, "commit"=>"Update Grub", "id"=>"2"}
+  [1m[36mGrub Load (0.5ms)[0m  [1m[34mSELECT "grubs".* FROM "grubs" WHERE "grubs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/grubs_controller.rb:63:in `set_grub'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/grubs_controller.rb:40:in `block in update'
+  [1m[36mGrub Update (2.7ms)[0m  [1m[33mUPDATE "grubs" SET "calories" = $1, "updated_at" = $2 WHERE "grubs"."id" = $3[0m  [["calories", 12], ["updated_at", "2024-02-20 10:30:14.576596"], ["id", 2]]
+  ↳ app/controllers/grubs_controller.rb:40:in `block in update'
+  [1m[36mTRANSACTION (5.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/grubs_controller.rb:40:in `block in update'
+Redirected to http://127.0.0.1:3000/grubs/2
+Completed 302 Found in 19ms (ActiveRecord: 8.8ms | Allocations: 4693)
+
+
+Started GET "/grubs/2" for 127.0.0.1 at 2024-02-20 18:30:14 +0800
+Processing by GrubsController#show as TURBO_STREAM
+  Parameters: {"id"=>"2"}
+  [1m[36mGrub Load (0.3ms)[0m  [1m[34mSELECT "grubs".* FROM "grubs" WHERE "grubs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/grubs_controller.rb:63:in `set_grub'
+  Rendering layout layouts/application.html.erb
+  Rendering grubs/show.html.erb within layouts/application
+  Rendered grubs/_grub.html.erb (Duration: 1.0ms | Allocations: 419)
+  Rendered grubs/show.html.erb within layouts/application (Duration: 1.8ms | Allocations: 775)
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 131)
+  Rendered layout layouts/application.html.erb (Duration: 2.6ms | Allocations: 1468)
+Completed 200 OK in 5ms (Views: 3.0ms | ActiveRecord: 0.3ms | Allocations: 2380)
+
+
