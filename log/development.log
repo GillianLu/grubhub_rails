@@ -6571,3 +6571,24 @@ Processing by HomeController#index as HTML
 Completed 200 OK in 6ms (Views: 5.9ms | ActiveRecord: 0.0ms | Allocations: 3303)
 
 
+Started GET "/" for 127.0.0.1 at 2024-02-20 18:00:28 +0800
+  [1m[36mActiveRecord::SchemaMigration Load (27.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 96.1ms | Allocations: 44801)
+  Rendered home/_header.html.erb (Duration: 0.5ms | Allocations: 433)
+  Rendered layout layouts/application.html.erb (Duration: 104.6ms | Allocations: 49246)
+Completed 200 OK in 113ms (Views: 107.4ms | ActiveRecord: 0.0ms | Allocations: 53535)
+
+
+Started GET "/" for 127.0.0.1 at 2024-02-20 18:00:30 +0800
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 6.9ms | Allocations: 2217)
+  Rendered home/_header.html.erb (Duration: 0.5ms | Allocations: 189)
+  Rendered layout layouts/application.html.erb (Duration: 12.6ms | Allocations: 3281)
+Completed 200 OK in 14ms (Views: 13.5ms | ActiveRecord: 0.0ms | Allocations: 3593)
+
+
