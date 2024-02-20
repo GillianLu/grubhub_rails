@@ -181,17 +181,17 @@ section p {
     }
 }
 
-
 #grubs {
     text-align: center;
     padding: 40px 0;
 }
 
-#grubs .container {
+#grubs  .container{
     max-width: 1200px;
     margin: auto;
     overflow: hidden;
 }
+
 
 .grub-photos {
     display: flex;
@@ -221,17 +221,16 @@ section p {
 }
 
 footer {
-    background-color: #333;
+    background-color: #294B29;
     color: #fff;
     text-align: center;
-    padding: 20px 0;
+    padding: 0;
+    margin-bottom: 0;
 }
 
 footer p {
     color: #ddd;
 }
-
-
 
 @media (max-width: 768px) {
     .container {
